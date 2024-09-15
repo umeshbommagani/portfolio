@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4efe9;
+}
+
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header .text-section {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.header h1 {
+    font-size: 72px;
+    line-height: 1.2;
+    color: #c29676;
+}
+.header h1 .first-name{
+    font-size: 72px;
+    line-height: 1.2;
+    color: #c29676;
+}
+.header h1 .last-name {
+    display: block;
+    font-size: 72px;
+    color: #000;
+}
+
+.header .get-in-touch {
+    margin-top: 30px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #c29676;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.header .image-section {
+    flex-wrap: 1;
+    display:flexbox;
+    justify-content: flex-end;
+}
+
+.header .profile-photo {
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.aboutsection p{
+    font-size: small;
+}
+h2 {
+    font-size: 52px;
+    line-height: 1.2;
+    color: black;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+}
+/* .about__container {
+    max-block-size: 0cqh;
+    max-width: 50px;
+    margin: 0 auto;
+} */
+
+.about {
+    padding: 50px;
+    width: 100%;
+    text-align:center;
+    margin: 0 auto;
+}
+.about h2{
+    padding-bottom: 20px;
+}
+
+.about__details {
+    padding: 2rem 0;
+    color: #333;
+    text-align: left;
+}
+
+nav {
+    background-color: rgb(7, 7, 7);
+    text-align: center;
+}
+
+.navbar ul li {
+    list-style-type: none;
+    color: whitesmoke;
+    display: inline-block;
+    padding: 12px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li:hover {
+    background-color: #0044cb
+}
+.container h3{
+    font-size: 25px;
+    line-height: 1.2;
+    color:grey;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+.container p{
+    padding-bottom: 10px;
+    margin: 10px;
+    list-style-type: disc;
+
+}
+
+ 
+section{
+    background-color: white ;
+    padding: 14px 12px;
+    border-radius: 4px;
+    margin: 10px;
+}
+/* ul li{
+    padding: 0;
+} */
+
+/* #curriculum ul{
+    display: flex;
+    padding: 6px;
+    gap: 10px;
+} */
+/* #curriculum li{
+    list-style: none;
+    background-color:#f3f3f3;
+    padding: 8px;
+    border-radius:10px;
+} */
+/* #curriculum ul li h2{
+    font-size: medium;
+    margin-left: 1.5rem;
+    color:#1a41d6
+    
+} */
+
+
+.skills .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+}
+.container h1{
+    margin: 0;
+    font-size: 50px;
+    color: white;
+}
+.container h1 span{
+    padding: 6px 14px;
+    display: inline-block;
+}
+.cen{
+    margin: 20px;
+    display: block;
+    font-size: 15px;
+}
+
+.skills .hex-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.skills .hex {
+    width: 150px;
+    height: 86.6px; 
+    background-color:rgb(236, 232, 232);
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(26.25% 2.5%, 73.75% 2.5%, 95% 50%, 73.75% 97.5%, 26.25% 97.5%, 5% 50%);
+    cursor: pointer;
+    padding:25px
+
+}
+
+
+
+
+
+.skills .hex-content {
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+}
+#hex1{
+    margin-top: 45px;
+    margin-bottom: -10px;
+}
