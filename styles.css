@@ -265,3 +265,132 @@ section{
     margin-top: 45px;
     margin-bottom: -10px;
 }
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4efe9;
+    padding-top: 60px; /* Adjust to avoid overlap with the fixed navbar */
+}
+
+/* Fixed Navigation Bar */
+nav {
+    background-color: rgb(7, 7, 7);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Keeps it above other elements */
+    text-align: center;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navbar ul li {
+    display: inline-block;
+    padding: 12px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li:hover {
+    background-color: #0044cb;
+}
+
+/* Header Section */
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header .text-section {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.header h1 {
+    font-size: 72px;
+    line-height: 1.2;
+    color: #c29676;
+}
+
+.header h1 .first-name {
+    font-size: 72px;
+    line-height: 1.2;
+    color: #c29676;
+}
+
+.header h1 .last-name {
+    display: block;
+    font-size: 72px;
+    color: #000;
+}
+
+.header .get-in-touch {
+    margin-top: 30px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #c29676;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Responsive Image Section */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header .text-section {
+        padding-right: 0;
+    }
+
+    .header h1 {
+        font-size: 48px;
+    }
+
+    .header h1 .first-name, .header h1 .last-name {
+        font-size: 48px;
+    }
+
+    .header .profile-photo {
+        width: 200px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 36px;
+    }
+
+    .header h1 .first-name, .header h1 .last-name {
+        font-size: 36px;
+    }
+
+    .header .profile-photo {
+        width: 150px;
+    }
+}
