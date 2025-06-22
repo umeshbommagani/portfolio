@@ -1,131 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Umesh Bommagani | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
 </head>
 <body>
-   
-    
-    <section class="header" id="header">
-        <div class="container">
-            <div class="text-section">
-                <h1><span class="first-name">Umesh</span> <span class="last-name">Bommagani</span></h1>
-                <a href="#" class="get-in-touch" id="contactBtn">Get in Touch</a>
-            </div>
-            <div class="image-section">
-                <img src="umesh.jpg" alt="Umesh Bommagani" class="profile-photo">
-            </div>
-        </section break>
-    <nav>
-        <div class="navbar ">
-            <ul>
-                
-                <li><a href ="#about">About Me</a></li>
-                <li><a href ="#Education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href ="#randr">Roles and Responsibilites</a></li>
-            </ul>
-        </div>
-    </nav>
-    
-    <section  class="about" id="about">
-        <div class="section_container about_container">
-            <div class="about__content">
-                <h2 class="section__title">About <span>Me</span></h2>
-                <p class="about__details">
-                    Hi, I'm Umesh Bommagani, a passionate developer with a knack for solving complex problems.
-            I enjoy working on creative projects, building websites.
-            When I'm not coding, you can find organizing the events or exploring the latest tech trends.
-        
-                </p>
-                <a href="educa.html" class="btn">More About</a>
-            </div>
-        </div>
-    
-    </section>
-    <section class="container">
-    <section class="Education" id="Education">
-        <h3>Education</h3>
-        <P>MSIT(2024-2026)-IIITH</P>
-        <p>B.TECH(2020-2024) - VNRVJIET </p>
-        <p>Intermediate(2018-2020)-Nano Junior College</p>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">⬆️</button>
 
-    </section>
-    </section>
-    <section class="container">
-    <section class="projects" id="projects">
-        <h3>Projects</h3>
-        <p>IOT based Smart Gloves for Miltary Personal communication</p>
-        <p>IOT Irrigation Monitoring & Controller System</p>
-        <p>Classification Of Diabetic Retinopathy Stages Using Hybrid CNN Transformer Ensemble Models</p>
-        <p>Line Following Robot
-        </p>
-                    <a href="projects.html" class="btn">View Projects</a>
-                </div>
-            </div>
-
-    </section>
-    </section>
-    <section class="container" id="container">
-    <section class="skills" id="skills">
-        <h3> Skills</h3>
-        <div class="hex-container">
-        <div class="hex" id="hex1"><div class="hex-content">Python</div></div>
-        <div class="hex" id="hex2"><div class="hex-content">HTML</div></div>
-        <div class="hex active" id="hex1"><div class="hex-content">CSS</div></div>
-        <div class="hex" id="hex2"><div class="hex-content">GIT</div></div>
-        <div class="hex" id="hex1"><div class="hex-content">Excel</div></div>
-        <div class="hex" id="hex2"><div class="hex-content">Java</div></div>
-        </div>
-    </section>
-    </section>
-    <section class="container">
-    <section class="randr" id="randr">
-        <h3>Roles and Responsibilites</h3>
-        <p>chairmain for the N-ARMY in vnrvjiet </p>
-        <p> ISOI committe member </p>
-        <p> committe member for the sintillashunz</p>
-    </section>
-    </section>
-    
-
-    
-   
-
-    <!-- Modal -->
-    <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Contact Information</h2>
-            <p>Email: <a href="mailto:bommaganiumesh29@gmail.com">bommaganiumesh29@gmail.com</a></p>
-            <p>Phone: <a href="tel:+91 8341033970">+91 8341033970</a></p>
-        </div>
+  <section class="header" id="header" data-aos="fade-down">
+    <div class="header-container">
+      <div class="text-section">
+        <h1>
+          <span class="first-name">Umesh</span>
+          <span class="typing">Bommagani</span>
+        </h1>
+        <a href="#" class="get-in-touch" id="contactBtn">Get in Touch</a>
+      </div>
+      <div class="image-section">
+        <img src="umesh.jpg" alt="Umesh Bommagani" />
+      </div>
     </div>
+  </section>
 
-    <script>
-        // Modal logic
-        const modal = document.getElementById("contactModal");
-        const btn = document.getElementById("contactBtn");
-        const span = document.getElementsByClassName("close")[0];
+  <nav data-aos="fade-up">
+    <div class="navbar">
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#Education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#randr">Roles & Responsibilities</a></li>
+      </ul>
+    </div>
+  </nav>
 
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
+  <section id="about" class="card" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>I'm Umesh Bommagani, a passionate developer with a knack for solving complex problems. I enjoy building creative projects and exploring emerging technologies. When not coding, I enjoy organizing events and staying on top of tech trends.</p>
+  </section>
 
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
+  <section id="Education" class="card" data-aos="fade-up">
+    <h2>Education</h2>
+    <p>MSIT (2024–2026) - IIIT Hyderabad</p>
+    <p>B.Tech (2020–2024) - VNR VJIET</p>
+    <p>Intermediate (2018–2020) - Nano Junior College</p>
+  </section>
 
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-        
-    </script>
+  <section id="projects" class="card" data-aos="fade-up">
+    <h2>Projects</h2>
+    <h3>Helmet Number Plate Detection – Mar 2023</h3>
+    <ul>
+      <li>Developed an AI-powered system using YOLOv5 for helmet detection and license plate extraction.</li>
+      <li>Built a GUI for real-time image/video analysis and result visualization.</li>
+      <li>Implemented license plate cropping, text extraction, CSV logging, and data storage.</li>
+    </ul>
+    <h3>Smart Helmet – Sep 2023</h3>
+    <ul>
+      <li>Designed a safety system using Arduino and alcohol sensors to prevent unsafe ignition.</li>
+      <li>Enabled wireless alerts using RF modules for real-time safety monitoring.</li>
+    </ul>
+  </section>
+
+  <section id="skills" class="card" data-aos="fade-up">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="hex-container">
+        <div class="hex"><span>Python</span></div>
+        <div class="hex"><span>HTML</span></div>
+        <div class="hex"><span>CSS</span></div>
+        <div class="hex"><span>GIT</span></div>
+        <div class="hex"><span>Excel</span></div>
+        <div class="hex"><span>MySQL</span></div>
+        <div class="hex"><span>MongoDB</span></div>
+        <div class="hex"><span>Git</span></div>
+        <div class="hex"><span>Figma</span></div>
+        <div class="hex"><span>Microsoft Excel</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="randr" class="card" data-aos="fade-up">
+    <h2>Roles and Responsibilities</h2>
+    <ul>
+      <li>Chairman – N-ARMY, VNRVJIET</li>
+      <li>Member – ISOI Committee</li>
+      <li>Organizer – Sintillashunz Fest</li>
+    </ul>
+  </section>
+
+  <footer data-aos="fade-up">
+    <p>&copy; 2025 Umesh Bommagani</p>
+    <p>
+      <a href="https://github.com/BommaganiUmeshChandra" target="_blank">GitHub</a> |
+      <a href="https://www.linkedin.com/in/umesh-bommagani-709169234/" target="_blank">LinkedIn</a>
+    </p>
+  </footer>
+
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Contact Information</h2>
+      <p>Email: <a href="mailto:bommaganiumesh29@gmail.com">bommaganiumesh29@gmail.com</a></p>
+      <p>Phone: <a href="tel:+918341033970">+91 83410 33970</a></p>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("contactModal");
+    const btn = document.getElementById("contactBtn");
+    const span = document.getElementsByClassName("close")[0];
+    btn.onclick = () => modal.style.display = "block";
+    span.onclick = () => modal.style.display = "none";
+    window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+    }
+
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = function () {
+      scrollTopBtn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
+    };
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    AOS.init({ duration: 1000, once: true });
+  </script>
 </body>
 </html>
